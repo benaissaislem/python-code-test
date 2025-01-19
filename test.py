@@ -5,7 +5,7 @@ def check_number_in_line(ch):
         #check the first number
         if i in com:
             #print ("first number =" ,i)
-            num =num + 10* (int(i))  #Change it to resolve the case of a zero number in the string without performing a test
+            num =num + 10* (int(i))  
             break
 
     for i in reversed(ch) :
@@ -22,7 +22,7 @@ def process_text_file(file_path):
         with open(file_path, 'r') as file:
             lines = file.readlines()
             for line_number, line in enumerate(lines, start=1):
-                line = line.strip()  # Remove leading/trailing whitespace
+                line = line.strip()  
                 result = check_number_in_line(line)
                 somme=result+somme
                 print(f"la valeur d'étalonnage n°  {line_number}: {result}")
@@ -31,8 +31,8 @@ def process_text_file(file_path):
         print(f"File not found: {file_path}")
     except Exception as e:
         print(f"An error occurred: {e}")
-# Provide the path to your text file
+
 file_path = r"document.txt"
 
-# Process the file
+
 process_text_file(file_path)
